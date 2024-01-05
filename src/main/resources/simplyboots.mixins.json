@@ -4,7 +4,6 @@
   "package": "io.github.alabasteralibi.simplyboots.mixins",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "AnvilScreenHandlerMixin",
     "BlockCollisionSpliteratorMixin",
     "EntityMixin",
     "EquipmentMixin",

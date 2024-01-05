@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smithing_transform",
+  "base": {
+    "item": "simplyboots:water_walking_boots"
+  },
+  "addition": {
+    "item": "minecraft:wither_skeleton_skull"
+  },
+  "result": {
+    "item": "simplyboots:obsidian_water_walking_boots"
+  },
+  "template": []
+}
