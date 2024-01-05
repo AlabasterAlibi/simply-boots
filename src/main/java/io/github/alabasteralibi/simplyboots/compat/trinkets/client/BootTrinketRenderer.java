@@ -1,7 +1,8 @@
-package io.github.alabasteralibi.simplyboots.client;
+package io.github.alabasteralibi.simplyboots.compat.trinkets.client;
 
 import dev.emi.trinkets.api.SlotReference;
 import dev.emi.trinkets.api.client.TrinketRenderer;
+import io.github.alabasteralibi.simplyboots.client.BootArmorRenderer;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.model.BipedEntityModel;

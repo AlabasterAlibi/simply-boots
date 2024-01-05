@@ -1,6 +1,7 @@
 package io.github.alabasteralibi.simplyboots;
 
 import com.mojang.blaze3d.systems.RenderSystem;
+import io.github.alabasteralibi.simplyboots.compat.trinkets.SimplyBootsTrinketsDelegateClient;
 import io.github.alabasteralibi.simplyboots.components.BootComponents;
 import io.github.alabasteralibi.simplyboots.components.LavaBootsComponent;
 import io.github.alabasteralibi.simplyboots.components.RocketBootsComponent;
@@ -24,6 +25,10 @@ public class SimplyBootsClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+        if (SimplyBootsHelpers.TRINKETS_LOADED) {
+            SimplyBootsTrinketsDelegateClient.registerRenderers();
+        }
+
         HudRenderCallback.EVENT.register(this::setupHudAdditions);
     }
 

@@ -1,6 +1,7 @@
 package io.github.alabasteralibi.simplyboots.registry;
 
 import io.github.alabasteralibi.simplyboots.SimplyBootsHelpers;
+import io.github.alabasteralibi.simplyboots.compat.trinkets.SimplyBootsTrinketsDelegate;
 import io.github.alabasteralibi.simplyboots.items.BootItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -43,6 +44,11 @@ public class SimplyBootsItems {
     private static Item register(String name, Item item) {
         Registry.register(Registries.ITEM, SimplyBootsHelpers.id(name), item);
         ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, SimplyBootsHelpers.id("main_group"))).register(entries -> entries.add(item));
+
+        if (SimplyBootsHelpers.TRINKETS_LOADED) {
+            SimplyBootsTrinketsDelegate.registerItem(item);
+        }
+
         return item;
     }
 }
